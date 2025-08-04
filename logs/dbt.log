@@ -1,0 +1,29 @@
+[0m18:42:46.290572 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DC5886F170>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DC544DDA60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DC573DEF60>]}
+
+
+============================== 18:42:46.392400 | 022417d8-abdd-4a78-b040-23faf9a1caab ==============================
+[0m18:42:46.392400 [info ] [MainThread]: Running with dbt=1.10.6
+[0m18:42:46.393408 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\mathe\\.dbt', 'debug': 'False', 'fail_fast': 'False', 'log_path': 'logs', 'version_check': 'True', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'static_parser': 'True', 'invocation_command': 'dbt init', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m18:54:27.793474 [debug] [MainThread]: Starter project path: C:\Users\mathe\OneDrive\Anexos de email\Área de Trabalho\00. Jornada de Dados\bootcamp-dbt-core\dbt-bootcamp-northwind\.venv\Lib\site-packages\dbt\include\starter_project
+[0m18:54:27.891483 [info ] [MainThread]: 
+Your new dbt project "northwind" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m18:54:27.892490 [info ] [MainThread]: Setting up your profile.
+[0m23:05:23.031168 [info ] [MainThread]: Profile northwind written to C:\Users\mathe\.dbt\profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
+[0m23:05:23.038167 [debug] [MainThread]: Command `dbt init` succeeded at 23:05:23.037176 after 15756.87 seconds
+[0m23:05:23.041167 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DC51BC1880>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DC51BC17F0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DC58954BF0>]}
+[0m23:05:23.043167 [debug] [MainThread]: Flushing usage events
+[0m23:05:24.209043 [debug] [MainThread]: An error was encountered while trying to flush usage events
