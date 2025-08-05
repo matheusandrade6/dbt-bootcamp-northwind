@@ -1,6 +1,8 @@
-"region_id","region_description"
-1,"Eastern"
-2,"Western"
-3,"Northern"
-4,"Southern"
-5,"Center"
+"category_id","category_name","subcategory_name","description","picture","updated_at"
+101,"Clothing","Shirts","Highly recommended by experts.","720d2260-dea0-4125-9ff4-5884cefa8ed7",2025-08-03 00:10:58
+104,"Books","Non-Fiction","High quality and durable.","d1754f54-231b-4278-a557-491aff9ccdb2",2025-07-16 20:06:58
+102,"Home","Decor","Customer favorite product.","e4c1a215-c9ca-499c-98f2-a36fc8fb2bbd",2025-07-17 20:24:58
+104,"Books","Non-Fiction","Top rated item.","c52f42c5-eded-4437-98b5-f1383816e84f",2025-07-05 19:04:58
+101,"Clothing","Pants","Highly recommended by experts.","12cd3963-03ab-4ffd-832f-b6dff5082c2f",2025-07-14 18:41:58
+102,"Home","Appliances","High quality and durable.","a0837008-913e-44f6-802d-0b8499f5aed5",2025-07-23 18:41:58
+102,"Home","Appliances","High quality and durable.","2bd2301e-5d1d-4fe7-adf7-4f6bf51ef1b2",2025-07-16 13:39:58
