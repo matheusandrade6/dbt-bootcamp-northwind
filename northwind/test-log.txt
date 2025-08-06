@@ -1,0 +1,74 @@
+[0m02:26:33  Running with dbt=1.10.6
+[0m02:26:33  Registered adapter: postgres=1.9.0
+[0m02:26:33  [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 2 unused configuration paths:
+- models.northwind.intermediate
+- models.northwind.marts
+[0m02:26:33  Found 2 seeds, 2 models, 10 data tests, 2 sources, 434 macros
+[0m02:26:33  
+[0m02:26:33  Concurrency: 1 threads (target='dev')
+[0m02:26:33  
+[0m02:26:37  1 of 10 START test accepted_values_stg_orders_status__placed__shipped__completed__returned  [RUN]
+[0m02:26:39  1 of 10 FAIL 1 accepted_values_stg_orders_status__placed__shipped__completed__returned  [[31mFAIL 1[0m in 1.79s]
+[0m02:26:39  2 of 10 START test not_null_stg_customers_customer_id .......................... [RUN]
+[0m02:26:41  2 of 10 PASS not_null_stg_customers_customer_id ................................ [[32mPASS[0m in 1.85s]
+[0m02:26:41  3 of 10 START test not_null_stg_customers_email ................................ [RUN]
+[0m02:26:43  3 of 10 FAIL 1 not_null_stg_customers_email .................................... [[31mFAIL 1[0m in 1.69s]
+[0m02:26:43  4 of 10 START test not_null_stg_customers_name ................................. [RUN]
+[0m02:26:45  4 of 10 FAIL 1 not_null_stg_customers_name ..................................... [[31mFAIL 1[0m in 1.70s]
+[0m02:26:45  5 of 10 START test not_null_stg_orders_customer_id ............................. [RUN]
+[0m02:26:46  5 of 10 ERROR not_null_stg_orders_customer_id .................................. [[31mERROR[0m in 1.74s]
+[0m02:26:46  6 of 10 START test not_null_stg_orders_order_id ................................ [RUN]
+[0m02:26:48  6 of 10 PASS not_null_stg_orders_order_id ...................................... [[32mPASS[0m in 1.82s]
+[0m02:26:48  7 of 10 START test relationships_stg_orders_customer_id__customer_id__ref_stg_customers_  [RUN]
+[0m02:26:50  7 of 10 ERROR relationships_stg_orders_customer_id__customer_id__ref_stg_customers_  [[31mERROR[0m in 1.83s]
+[0m02:26:50  8 of 10 START test unique_stg_customers_customer_id ............................ [RUN]
+[0m02:26:52  8 of 10 PASS unique_stg_customers_customer_id .................................. [[32mPASS[0m in 1.78s]
+[0m02:26:52  9 of 10 START test unique_stg_customers_email .................................. [RUN]
+[0m02:26:54  9 of 10 FAIL 1 unique_stg_customers_email ...................................... [[31mFAIL 1[0m in 1.83s]
+[0m02:26:54  10 of 10 START test unique_stg_orders_order_id ................................. [RUN]
+[0m02:26:55  10 of 10 PASS unique_stg_orders_order_id ....................................... [[32mPASS[0m in 1.78s]
+[0m02:26:57  
+[0m02:26:57  Finished running 10 data tests in 0 hours 0 minutes and 23.55 seconds (23.55s).
+[0m02:26:57  
+[0m02:26:57  [31mCompleted with 6 errors, 0 partial successes, and 0 warnings:[0m
+[0m02:26:57  
+[0m02:26:57  [31mFailure in test accepted_values_stg_orders_status__placed__shipped__completed__returned (models\staging\crm\_crm__models.yml)[0m
+[0m02:26:57    Got 1 result, configured to fail if != 0
+[0m02:26:57  
+[0m02:26:57    compiled code at target\compiled\northwind\models\staging\crm\_crm__models.yml\accepted_values_stg_orders_7c9e0be389dac14a09b2140966f0792f.sql
+[0m02:26:57  
+[0m02:26:57  [31mFailure in test not_null_stg_customers_email (models\staging\crm\_crm__models.yml)[0m
+[0m02:26:57    Got 1 result, configured to fail if != 0
+[0m02:26:57  
+[0m02:26:57    compiled code at target\compiled\northwind\models\staging\crm\_crm__models.yml\not_null_stg_customers_email.sql
+[0m02:26:57  
+[0m02:26:57  [31mFailure in test not_null_stg_customers_name (models\staging\crm\_crm__models.yml)[0m
+[0m02:26:57    Got 1 result, configured to fail if != 0
+[0m02:26:57  
+[0m02:26:57    compiled code at target\compiled\northwind\models\staging\crm\_crm__models.yml\not_null_stg_customers_name.sql
+[0m02:26:57  
+[0m02:26:57  [31mFailure in test not_null_stg_orders_customer_id (models\staging\crm\_crm__models.yml)[0m
+[0m02:26:57    Database Error in test not_null_stg_orders_customer_id (models\staging\crm\_crm__models.yml)
+  column "customer_id" does not exist
+  LINE 16: select customer_id
+                  ^
+  compiled code at target\run\northwind\models\staging\crm\_crm__models.yml\not_null_stg_orders_customer_id.sql
+[0m02:26:57  
+[0m02:26:57    compiled code at target\compiled\northwind\models\staging\crm\_crm__models.yml\not_null_stg_orders_customer_id.sql
+[0m02:26:57  
+[0m02:26:57  [31mFailure in test relationships_stg_orders_customer_id__customer_id__ref_stg_customers_ (models\staging\crm\_crm__models.yml)[0m
+[0m02:26:57    Database Error in test relationships_stg_orders_customer_id__customer_id__ref_stg_customers_ (models\staging\crm\_crm__models.yml)
+  column "customer_id" does not exist
+  LINE 15:     select customer_id as from_field
+                      ^
+  compiled code at target\run\northwind\models\staging\crm\_crm__models.yml\relationships_stg_orders_96411fe0c89b49c3f4da955dfd358ba0.sql
+[0m02:26:57  
+[0m02:26:57    compiled code at target\compiled\northwind\models\staging\crm\_crm__models.yml\relationships_stg_orders_96411fe0c89b49c3f4da955dfd358ba0.sql
+[0m02:26:57  
+[0m02:26:57  [31mFailure in test unique_stg_customers_email (models\staging\crm\_crm__models.yml)[0m
+[0m02:26:57    Got 1 result, configured to fail if != 0
+[0m02:26:57  
+[0m02:26:57    compiled code at target\compiled\northwind\models\staging\crm\_crm__models.yml\unique_stg_customers_email.sql
+[0m02:26:57  
+[0m02:26:57  Done. PASS=4 WARN=0 ERROR=6 SKIP=0 NO-OP=0 TOTAL=10
